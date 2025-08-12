@@ -1,32 +1,7 @@
 import discord
-from discord.ext import commands
-from discord.ui import View, Select, Button
 
-# ==== CONFIG ====
-TOKEN = "MTQwNDg5OTg4NDY5NTU1NjE0OA.Gj_xrB.zZ_kQI-VJ3JBM59b4nWN9nS09MGquUrtAlh12o"
-TICKET_CHANNEL_ID = 1404214235780743258  # Channel where the menu should be sent
-TICKET_CATEGORY_ID = 1404214141400514631  # Category for new tickets
-STAFF_ROLE_ID = 1404209643399413760       # Support role ID
-LOGO_URL = "https://i.imgur.com/3ae8QPz.jpeg"   # Direct logo link
-# ================
-
-intents = discord.Intents.default()
 intents.messages = True
-intents.guilds = True
-intents.members = True
-
-bot = commands.Bot(command_prefix="!", intents=intents)
-
-
-class TicketSelect(Select):
-    def __init__(self):
-        options = [
-            discord.SelectOption(label="Purchase", description="Open a ticket for a purchase", emoji="💳"),
-            discord.SelectOption(label="Support", description="Request help or support", emoji="🛠️"),
-            discord.SelectOption(label="Exchange", description="Exchange a product", emoji="🔁"),
-            discord.SelectOption(label="Product not received", description="If you did not receive your order", emoji="📦"),
-            discord.SelectOption(label="Partnership", description="Request a partnership", emoji="🤝"),
-        ]
+intents.guilds =
         super().__init__(
             placeholder="Select a category...",
             min_values=1,
